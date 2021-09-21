@@ -32,7 +32,7 @@
                 android:textAlignment="center"
                 android:layout_marginVertical="8dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="title"
+                android:text="@string/field_title"
                 android:textSize="20sp"/>
 
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_marginBottom="6dp"
                 android:fontFamily="sans-serif-medium"
                 android:textFontWeight="400"
-                android:text="天空の城ラピュタ"
+                android:text="@string/field_original_title"
                 android:textSize="18sp"/>
 
             <TextView
@@ -53,16 +53,44 @@
                 android:textSize="16sp"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginBottom="4dp"
-                android:text="descrip tion"/>
+                android:text="@string/field_description"/>
 
             <TextView
                 android:id="@+id/animeDirector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_gravity="bottom|end"
-                android:text="director"/>
+                android:text="@string/field_director"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/viewAnimeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    app:icon="@drawable/eye"
+                    app:iconGravity="start"
+                    app:iconSize="30dp"
+                    app:iconTint="@color/grey"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addAnimeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    app:icon="@drawable/like"
+                    android:layout_marginTop="2dp"
+                    app:iconGravity="start"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/grey"/>
+            </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

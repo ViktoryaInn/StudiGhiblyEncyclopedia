@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AnimeApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_search_anime">Search Anime</string>
+    <string name="title_trending_anime">Trending Anime</string>
+    <string name="title_favorites">Favourites</string>
+
+    <string name="action_find">Find</string>
+
+    <string name="search_placeholder">Search anime by title</string>
+
+    <string name="field_director">Director</string>
+    <string name="field_description">Description</string>
+    <string name="field_original_title">天空の城ラピュタ</string>
+    <string name="field_title">Title</string>
+</resources>
