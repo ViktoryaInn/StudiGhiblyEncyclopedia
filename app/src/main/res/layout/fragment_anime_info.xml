@@ -4,12 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:paddingBottom="16dp"
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
@@ -33,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:fontFamily="sans-serif-medium"
-                    android:text="title"
+                    android:text="@string/field_title"
                     android:textFontWeight="600"
                     android:textSize="24sp" />
 
@@ -49,11 +51,12 @@
                 <RatingBar
                     android:id="@+id/animeInfoRaiting"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:layout_gravity="center_horizontal"
                     android:isIndicator="true"
                     android:numStars="5"
-                    android:stepSize="0.1"/>
+                    android:progressTint="#FFED4C"
+                    android:stepSize="0.1" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -75,12 +78,29 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/animeInfoOriginalTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/field_original_title"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/animeInfoOriginalTitleRomanised"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/field_original_title_romanised"
+                    android:textSize="14sp" />
+
+
+                <TextView
                     android:id="@+id/animeInfoDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:textSize="20sp"
-                    android:text="description"/>
+                    android:text="@string/field_description"/>
 
                 <TextView
                     android:id="@+id/animeInfoDirector"
@@ -88,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:textSize="20sp"
-                    android:text="director"/>
+                    android:text="@string/field_director"/>
 
                 <TextView
                     android:id="@+id/animeInfoProducer"
@@ -104,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:textSize="20sp"
-                    android:text="release date"/>
+                    android:text="@string/field_release_date"/>
 
                 <TextView
                     android:id="@+id/animeInfoRunningTime"
@@ -112,23 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:textSize="20sp"
-                    android:text="running time"/>
-
-                <TextView
-                    android:id="@+id/animeInfoEpisodeLength"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="20sp"
-                    android:text="episode length"/>
-
-                <TextView
-                    android:id="@+id/animeInfoShowType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="20sp"
-                    android:text="show type"/>
+                    android:text="@string/field_running_time"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -136,18 +140,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
+            android:layout_margin="8dp"
             android:gravity="bottom|center_horizontal"
             android:orientation="horizontal">
 
             <ToggleButton
+                android:id="@+id/animeToggleButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/purple_500"
                 android:minWidth="45dp"
                 android:minHeight="45dp"
                 android:textColor="@color/white"
-                android:textOff="add to favourites"
-                android:textOn="delete from favourites"
+                android:textOff="@string/action_add_to_fav"
+                android:textOn="@string/action_remove_from_fav"
                 android:textSize="18sp"
                 app:cornerRadius="5dp" />
         </LinearLayout>

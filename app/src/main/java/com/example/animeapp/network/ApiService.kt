@@ -1,6 +1,6 @@
 package com.example.animeapp.network
 
-import com.example.animeapp.model.AnimeList
+import com.example.animeapp.model.Anime
 import com.example.animeapp.model.AnimeShort
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("films")
-    suspend fun getAnimeList(): Response<ArrayList<AnimeShort>>
+    suspend fun getAnimeList(): Response<ArrayList<Anime>>
 
     companion object {
         const val HOST = "https://ghibliapi.herokuapp.com/"

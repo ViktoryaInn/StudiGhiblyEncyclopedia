@@ -14,7 +14,7 @@ import com.example.animeapp.model.Anime
 import com.example.animeapp.ui.anime.AnimeInfoFragment
 
 class MainActivity : AppCompatActivity() {
-    lateinit var  anime: Anime
+    lateinit var anime: Anime
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,13 +24,16 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+            )
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
-    fun toAnimeInfo(id: Int, fragment: Fragment){
+    fun toAnimeInfo(id: Int, fragment: Fragment) {
         val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         var rootView = this.findViewById<View>(android.R.id.content)
         fragmentTransaction.replace(rootView.id, fragment, fragment.toString())

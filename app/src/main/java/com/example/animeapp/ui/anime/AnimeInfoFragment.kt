@@ -22,7 +22,22 @@ class AnimeInfoFragment: Fragment() {
         binding = FragmentAnimeInfoBinding.inflate(inflater, container, false)
         animeManager = AnimeManager(requireContext())
 
+        val view = binding.root
 
-        return super.onCreateView(inflater, container, savedInstanceState)
+        binding.animeInfoTitle.text = anime.title
+        binding.animeInfoRaiting.rating = anime.rt_score.toFloat() / 20
+        binding.animeInfoDescription.text = anime.description
+        binding.animeInfoDirector.text = anime.director
+        binding.animeInfoProducer.text = anime.producer
+        binding.animeInfoReleaseDate.text = anime.release_date
+        binding.animeInfoRunningTime.text = anime.running_time
+        binding.animeInfoOriginalTitle.text = anime.original_title
+        binding.animeInfoOriginalTitleRomanised.text = anime.original_title_romanised
+
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
     }
 }

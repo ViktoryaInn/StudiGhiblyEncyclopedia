@@ -8,11 +8,19 @@
     <string name="title_favorites">Favourites</string>
 
     <string name="action_find">Find</string>
+    <string name="action_add_to_fav">Add to favourites</string>
+    <string name="action_remove_from_fav">Delete from favourites</string>
 
     <string name="search_placeholder">Search anime by title</string>
 
     <string name="field_director">Director</string>
     <string name="field_description">Description</string>
     <string name="field_original_title">天空の城ラピュタ</string>
+    <string name="field_original_title_romanised">Original Title Romanised</string>
     <string name="field_title">Title</string>
+    <string name="field_producer">Producer</string>
+    <string name="field_release_date">Release Date</string>
+    <string name="field_running_time">Running Time</string>
+    <string name="field_episode_length">Episode Length</string>
+    <string name="field_show_type">Show Type</string>
 </resources>
